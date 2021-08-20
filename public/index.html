@@ -1,0 +1,2437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind css eCommerce project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css  "
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- website header -->
+    <header class="py-4 shadow-sm bg-white">
+      <div class="container flex items-center justify-between">
+        <!-- logo -->
+        <a href="index.html">
+          <img
+            src="https://rafcart.programmingkit.xyz/assets/images/svg/logo.svg"
+            class="w-32"
+            alt="logo"
+          />
+        </a>
+        <!-- logo -->
+
+        <!-- search bar -->
+        <div class="w-full max-w-xl relative flex">
+          <span class="absolute left-3 top-3 font-medium text-gray-400">
+            <i class="fas fa-search"></i>
+          </span>
+          <input
+            class="
+              w-full
+              border border-primary
+              pl-8
+              focus:border-primary focus:ring-0
+            "
+            type="text"
+            placeholder="Search..."
+          />
+          <button
+            class="
+              bg-primary
+              text-white
+              rounded-r-md
+              border-l-0 border border-primary
+              py-3
+              px-4
+              font-medium font-roboto
+              hover:bg-transparent hover:text-primary
+              transition
+            "
+          >
+            Search
+          </button>
+        </div>
+        <!-- search bar -->
+
+        <!-- icons -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="
+              relative
+              text-gray-700
+              hover:text-primary
+              transition
+              text-center
+            "
+          >
+            <div class="text-2xl">
+              <i class="far fa-heart"></i>
+            </div>
+            Wishlist
+            <span
+              class="
+                absolute
+                -top-1
+                right-0
+                text-xs
+                bg-primary
+                text-white
+                w-5
+                h-5
+                text-center
+                rounded-full
+                flex
+                items-center
+                justify-center
+              "
+              >10</span
+            >
+          </a>
+          <a
+            href="#"
+            class="
+              relative
+              text-gray-700
+              hover:text-primary
+              transition
+              text-center
+            "
+          >
+            <div class="text-2xl">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            Cart
+            <span
+              class="
+                absolute
+                -top-1
+                left-5
+                text-xs
+                bg-primary
+                text-white
+                w-5
+                h-5
+                text-center
+                rounded-full
+                flex
+                items-center
+                justify-center
+              "
+              >10</span
+            >
+          </a>
+          <a
+            href="#"
+            class="
+              relative
+              text-gray-700
+              hover:text-primary
+              transition
+              text-center
+            "
+          >
+            <div class="text-2xl">
+              <i class="far fa-user-circle"></i>
+            </div>
+            Account
+            <span
+              class="
+                absolute
+                -top-1
+                right-0
+                text-xs
+                bg-primary
+                text-white
+                w-5
+                h-5
+                text-center
+                rounded-full
+                flex
+                items-center
+                justify-center
+              "
+              >10</span
+            >
+          </a>
+        </div>
+        <!-- icons -->
+      </div>
+    </header>
+    <!-- website header -->
+
+    <!-- navbar -->
+    <nav class="bg-gray-700">
+      <div class="container flex items-center">
+        <!-- all category -->
+        <div class="py-3 px-10 bg-primary cursor-pointer relative group">
+          <span class="text-xl text-white">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="capitalize text-white ml-2 font-medium text-roboto"
+            >All Category</span
+          >
+          <div
+            class="
+              absolute
+              w-full
+              left-0
+              bg-white
+              top-full
+              shadow-md
+              py-3
+              invisible
+              divide-y divide-dashed divide-gray-300
+              hidden
+              opacity-0
+              transition
+              duration-300
+              group-hover:block group-hover:opacity-100 group-hover:visible
+            "
+          >
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="fas fa-tshirt"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Fashion</span
+              >
+            </a>
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="fas fa-male"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Man</span
+              >
+            </a>
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="fas fa-female"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Female</span
+              >
+            </a>
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="fas fa-headphones-alt"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Headphones</span
+              >
+            </a>
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="far fa-clock"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Watch</span
+              >
+            </a>
+            <a href="#" class="flex items-center px-6 py-2">
+              <span class="text-xl text-primary opacity-50">
+                <i class="fas fa-desktop"></i>
+              </span>
+              <span
+                class="
+                  ml-3
+                  text-md text-gray-600
+                  font-semibold
+                  hover:text-primary
+                  transition
+                "
+                >Desktop</span
+              >
+            </a>
+          </div>
+        </div>
+        <!-- all category -->
+
+        <!-- navbar link -->
+        <div class="flex items-center justify-between flex-grow pl-12">
+          <div class="flex items-center space-x-6 capitalize">
+            <a
+              href="index.html"
+              class="text-gray-300 font-roboto font-medium hover:text-white"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 font-roboto font-medium hover:text-white"
+              >Shop</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 font-roboto font-medium hover:text-white"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 font-roboto font-medium hover:text-white"
+              >Contact Us</a
+            >
+          </div>
+          <div>
+            <a
+              href="#"
+              class="text-gray-300 font-roboto font-medium hover:text-white"
+              >Login/Register</a
+            >
+          </div>
+        </div>
+        <!-- navbar link -->
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- banner -->
+    <section
+      class="py-28 object-cover"
+      style="
+        background: url('https://rafcart.programmingkit.xyz/assets/images/banner-2.jpg');
+      "
+    >
+      <div class="container grid grid-cols-2">
+        <div class="col-span-1">
+          <h1
+            class="
+              text-gray-800
+              lg:text-5xl
+              md:text-4xl
+              text-2xl
+              font-roboto font-semibold
+            "
+          >
+            Best Collection For <br />
+            Home Decoration
+          </h1>
+          <p
+            class="
+              text-gray-600
+              md:mt-8
+              mt-4
+              md:mb-14
+              mb-10
+              text-md
+              font-medium
+            "
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate
+            rhoncus pellentesque id integer neque, vel accumsan dolor diam.
+          </p>
+          <a
+            href="#"
+            class="
+              bg-primary
+              text-white
+              md:px-5 md:py-3
+              px-3
+              py-2
+              uppercase
+              font-semibold
+              rounded-md
+              border border-primary
+              transition
+              hover:bg-transparent hover:text-primary
+            "
+            >shop now</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+
+    <!-- features area -->
+    <section class="my-10">
+      <div
+        class="container grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10"
+      >
+        <div
+          class="
+            flex
+            items-center
+            justify-center
+            border border-primary
+            py-6
+            rounded-md
+          "
+        >
+          <div>
+            <img
+              src="https://rafcart.programmingkit.xyz/assets/images/svg/delivery-van.svg"
+              alt=""
+            />
+          </div>
+          <div class="ml-6">
+            <h4 class="text-gray-800 font-semibold text-xl capitalize">
+              Free shipping
+            </h4>
+            <p class="text-gray-500">Orders over $200</p>
+          </div>
+        </div>
+
+        <div
+          class="
+            flex
+            items-center
+            justify-center
+            border border-primary
+            py-6
+            rounded-md
+          "
+        >
+          <div>
+            <img
+              src="https://rafcart.programmingkit.xyz/assets/images/svg/money-back.svg"
+              alt=""
+            />
+          </div>
+          <div class="ml-6">
+            <h4 class="text-gray-800 font-semibold text-xl capitalize">
+              Money Returns
+            </h4>
+            <p class="text-gray-500">30 Days money return</p>
+          </div>
+        </div>
+
+        <div
+          class="
+            flex
+            items-center
+            justify-center
+            border border-primary
+            py-6
+            rounded-md
+          "
+        >
+          <div>
+            <img
+              src="https://rafcart.programmingkit.xyz/assets/images/svg/service-hours.svg"
+              alt=""
+            />
+          </div>
+          <div class="ml-6">
+            <h4 class="text-gray-800 font-semibold text-xl capitalize">
+              24/7 Support
+            </h4>
+            <p class="text-gray-500">Customer support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- features area -->
+
+    <!-- offer deal -->
+    <section class="my-10">
+      <div class="container grid md:grid-cols-2 grid-cols-1 gap-8">
+        <div class="bg-red-200">
+          <div class="flex items-center justify-between px-8 py-10">
+            <div>
+              <h3 class="text-red-600 font-semibold text-xl">30% offer</h3>
+              <h4 class="text-gray-900 font-semibold text-2xl">
+                Free Shipping
+              </h4>
+              <p class="text-md text-gray-700 font-normal">
+                Attractive Natural Furniture
+              </p>
+              <a
+                href="#"
+                class="
+                  inline-block
+                  mt-5
+                  px-4
+                  py-2
+                  border border-primary
+                  text-sm
+                  font-semibold
+                  uppercase
+                  rounded-md
+                  bg-primary
+                  text-white
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+                >shop now</a
+              >
+            </div>
+            <div>
+              <img
+                class="
+                  object-cover
+                  w-40
+                  transform
+                  hover:scale-110
+                  transition
+                  overflow-hidden
+                "
+                src="https://rafcart.programmingkit.xyz/assets/images/sofa-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-200">
+          <div class="flex items-center justify-between px-8 py-10">
+            <div>
+              <h3 class="text-red-600 font-semibold text-xl">30% offer</h3>
+              <h4 class="text-gray-900 font-semibold text-2xl">Flash Sale</h4>
+              <p class="text-md text-gray-700 font-normal">
+                Attractive Natural Furniture
+              </p>
+              <a
+                href="#"
+                class="
+                  inline-block
+                  mt-5
+                  px-4
+                  py-2
+                  border border-primary
+                  text-sm
+                  font-semibold
+                  uppercase
+                  rounded-md
+                  bg-primary
+                  text-white
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+                >shop now</a
+              >
+            </div>
+            <div>
+              <img
+                class="
+                  object-cover
+                  w-40
+                  transform
+                  hover:scale-110
+                  transition
+                  overflow-hidden
+                "
+                src="https://rafcart.programmingkit.xyz/assets/images/sofa-2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- offer deal -->
+
+    <!-- category -->
+    <section class="mt-10">
+      <div class="container">
+        <h2 class="uppercase font-semibold text-2xl text-gray-800 mb-5">
+          shop by category
+        </h2>
+        <div class="grid md:grid-cols-3 grid-cols-2 gap-3">
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-1.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Bedroom
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-2.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Mattresses
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-3.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Office
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-4.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Outdoor
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-5.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Lounges & Sofas
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+          <div class="relative rounded-md overflow-hidden">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/category-6.jpg"
+              alt=""
+            />
+            <a
+              href="#"
+              class="
+                absolute
+                z-50
+                inset-0
+                bg-black bg-opacity-50
+                flex
+                items-center
+                justify-center
+                text-xl
+                font-medium
+                text-white
+                font-roboto
+                group
+                transition
+                hover:bg-opacity-70
+              "
+            >
+              Living & Dining
+              <span
+                ><i
+                  class="
+                    fas
+                    fa-long-arrow-alt-right
+                    ml-3
+                    transition
+                    hidden
+                    group-hover:block
+                  "
+                ></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- category -->
+
+    <!-- top new arrival -->
+    <section class="mt-10">
+      <div class="container">
+        <h2 class="uppercase font-semibold text-2xl text-gray-800 mb-5">
+          top new arrival
+        </h2>
+        <!-- product list -->
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product12.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div
+                  class="
+                    absolute
+                    top-2
+                    left-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-yellow-500
+                    text-white
+                    font-medium
+                    text-md
+                    font-roboto
+                  "
+                >
+                  50%
+                </div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product1.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div
+                  class="
+                    absolute
+                    top-2
+                    left-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-yellow-500
+                    text-white
+                    font-medium
+                    text-md
+                    font-roboto
+                  "
+                >
+                  50%
+                </div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product8.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div
+                  class="
+                    absolute
+                    top-2
+                    left-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-yellow-500
+                    text-white
+                    font-medium
+                    text-md
+                    font-roboto
+                  "
+                >
+                  50%
+                </div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product9.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <div
+                  class="
+                    absolute
+                    top-2
+                    left-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-yellow-500
+                    text-white
+                    font-medium
+                    text-md
+                    font-roboto
+                  "
+                >
+                  50%
+                </div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- top new arrival -->
+
+    <!-- ads banner -->
+    <section class="mt-10">
+      <div class="container">
+        <div>
+          <a href="#">
+            <img
+              class="object-cover w-full"
+              src="https://rafcart.programmingkit.xyz/assets/images/offer-2.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ads banner -->
+
+    <!-- recomended for you -->
+    <section class="mt-10">
+      <div class="container">
+        <h2 class="uppercase font-semibold text-2xl text-gray-800 mb-5">
+          recomended for you
+        </h2>
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product1.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product10.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product11.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product2.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product4.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product12.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product5.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative group transition">
+              <a href="#">
+                <img
+                  class="w-full object-cover"
+                  src="https://rafcart.programmingkit.xyz/assets/images/product8.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    top-2
+                    right-2
+                    py-1
+                    px-2
+                    rounded-md
+                    bg-white
+                    text-primary
+                    font-medium
+                    text-lg
+                    font-roboto
+                    transition
+                    hover:bg-primary hover:text-white
+                  "
+                >
+                  <i class="far fa-heart"></i>
+                </a>
+                <a
+                  href="#"
+                  class="
+                    absolute
+                    bottom-0
+                    left-0
+                    w-full
+                    text-center
+                    font-medium font-roboto
+                    py-2
+                    bg-gray-800
+                    text-white text-md
+                    hidden
+                    group-hover:block
+                  "
+                >
+                  <i class="fas fa-binoculars"></i>
+                  <span class="capitalize ml-1">quick view</span>
+                </a>
+              </div>
+            </div>
+            <div class="space-y-1 py-3 px-4 bg-gray-200">
+              <a
+                href="#"
+                class="
+                  font-semibold
+                  text-lg
+                  uppercase
+                  text-gray-800
+                  hover:text-primary
+                "
+                >Black ARCHIE</a
+              >
+              <p class="text-md font-normal text-gray-400">Black Bedside</p>
+              <div class="font-semibold text-xl text-pink-700">$400</div>
+              <div class="flex items-center">
+                <div class="text-yellow-500 space-x-1 text-sm">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                </div>
+                <div class="font-roboto font-medium text-sm ml-2">
+                  <span>(150)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                class="
+                  py-2
+                  w-full
+                  bg-primary
+                  text-white
+                  border border-primary
+                  rounded-b-md
+                  font-roboto
+                  text-md
+                  uppercase
+                  font-medium
+                  transition
+                  hover:bg-transparent hover:text-primary
+                "
+              >
+                <span><i class="fas fa-shopping-cart"></i></span>
+                <span class="ml-2">add to cart</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- recomended for you -->
+
+    <!-- footer -->
+    <section class="border-t border-gray-300 mt-10 bg-gray-200">
+      <div class="container grid md:grid-cols-3 grid-cols-1 gap-10 py-16">
+        <div class="space-y-4">
+          <img
+            src="https://rafcart.programmingkit.xyz/assets/images/svg/logo.svg"
+            alt=""
+          />
+          <p class="text-md font-medium text-gray-500">
+            Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used
+            in laying out print, gra phic or web designs the passage.
+          </p>
+          <div>
+            <h4 class="uppercase font-semibold text-lg text-gray-800 mb-2">
+              newsletter
+            </h4>
+            <form action="#">
+              <input
+                type="text"
+                class="
+                  border border-primary
+                  rounded-l-md
+                  focus:border-primary focus:ring-0 focus:outline-none
+                "
+                placeholder="Your email address"
+              />
+              <button
+                class="
+                  py-2
+                  px-3
+                  bg-primary
+                  -ml-1
+                  text-white
+                  font-semibold
+                  uppercase
+                  border border-primary border-l-0
+                  rounded-r-md
+                  transition
+                  hover:bg-white hover:text-primary
+                "
+              >
+                subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <h4
+              class="
+                uppercase
+                font-semibold font-roboto
+                text-md text-gray-800
+                mb-6
+              "
+            >
+              MY ACCOUNT
+            </h4>
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Orders</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Wishlist</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Track Order</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Manage Account</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Return Order</a
+            >
+          </div>
+          <div class="space-y-2">
+            <h4
+              class="
+                uppercase
+                font-semibold font-roboto
+                text-md text-gray-800
+                mb-6
+              "
+            >
+              INFORMATION
+            </h4>
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Orders</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Wishlist</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Track Order</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Manage Account</a
+            >
+            <a
+              class="
+                text-md
+                font-medium
+                text-gray-500
+                block
+                transition
+                hover:text-primary hover:underline
+              "
+              href="#"
+              >Return Order</a
+            >
+          </div>
+        </div>
+        <div class="space-y-2">
+          <h4 class="uppercase font-roboto font-semibold text-gray-800 mb-6">
+            CONTACT
+          </h4>
+          <p class="flex">
+            <span class="text-sm text-gray-500 mr-4"
+              ><i class="fas fa-map-marker-alt"></i
+            ></span>
+            <span class="text-md text-gray-700 font-normal"
+              >7895 Dr New Albuquerue, NM 19800, <br />
+              United States Of America</span
+            >
+          </p>
+          <p class="flex">
+            <span class="text-sm text-gray-500 mr-4"
+              ><i class="fas fa-phone"></i
+            ></span>
+            <span class="text-md text-gray-700 font-normal"
+              >+566 477 256, +566 254 575</span
+            >
+          </p>
+          <p class="flex">
+            <span class="text-sm mr-4 text-gray-500"
+              ><i class="fas fa-envelope"></i
+            ></span>
+            <span class="font-normal text-md text-gray-700"
+              >info@domain.com</span
+            >
+          </p>
+
+          <div class="space-x-3 relative top-3">
+            <a
+              href="#"
+              class="
+                inline-block
+                shadow-md
+                bg-gray-300
+                rounded
+                text-md
+                py-1
+                px-3
+                transition
+                ease-in
+                duration-150
+                hover:bg-blue-500 hover:text-white
+              "
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="
+                inline-block
+                shadow-md
+                bg-gray-300
+                rounded
+                text-md
+                py-1
+                px-3
+                transition
+                ease-in
+                duration-150
+                hover:bg-red-500 hover:text-white
+              "
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="#"
+              class="
+                inline-block
+                shadow-md
+                bg-gray-300
+                rounded
+                text-md
+                py-1
+                px-3
+                transition
+                ease-in
+                duration-150
+                hover:bg-blue-400 hover:text-white
+              "
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="
+                inline-block
+                shadow-md
+                bg-gray-300
+                rounded
+                text-md
+                py-1
+                px-3
+                transition
+                ease-in
+                duration-150
+                hover:bg-blue-500 hover:text-white
+              "
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <!-- script -->
+    <script src="./index.js"></script>
+  </body>
+</html>
