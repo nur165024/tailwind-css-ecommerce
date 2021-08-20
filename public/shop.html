@@ -868,6 +868,22 @@
 
           <!-- product category -->
           <div class="col-span-3 mt-10">
+            <!-- sort by product -->
+            <div class="flex items-center mb-8">
+              <select
+                name="sortBy"
+                class="
+                  border border-gray-400
+                  focus:border-gray-400 focus:ring-0
+                "
+              >
+                <option value="">Default sorting</option>
+                <option value="">Price low-high</option>
+                <option value="">Price high-low</option>
+              </select>
+            </div>
+            <!-- short by product -->
+
             <!-- product show -->
             <div class="grid grid-cols-3 gap-6">
               <div class="rounded-md shadow-md overflow-hidden">
@@ -1762,7 +1778,7 @@
                   hover:bg-primary hover:text-white hover:border-primary
                 "
               >
-                <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-right text-xs"></i>
               </div>
             </div>
             <!-- pagination -->
