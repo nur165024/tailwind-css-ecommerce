@@ -18,3 +18,9 @@
     @apply font-roboto;
   }
 }
+
+@layer components {
+  .size-selector .size_inp:checked + label {
+    @apply bg-primary text-white;
+  }
+}
